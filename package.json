@@ -1,20 +1,34 @@
 {
   "name": "projeto-ocorrenciaurbanas",
   "version": "1.0.0",
-  "description": "",
+  "description": "A API **ZelaCidade** foi criada para registrar e gerenciar problemas urbanos, como:",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "postinstall": "npm rebuild sqlite3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
     "sqlite": "^5.1.1",
-    "sqlite3": "^6.0.1"
-  }
+    "sqlite3": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustomohnnad/Zelacidade.git"
+  },
+  "bugs": {
+    "url": "https://github.com/augustomohnnad/Zelacidade/issues"
+  },
+  "homepage": "https://github.com/augustomohnnad/Zelacidade#readme"
 }

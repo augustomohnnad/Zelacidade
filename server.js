@@ -1,7 +1,11 @@
 const express = require("express");
 const { criarBanco } = require("./database");
+const cors = require("cors")
+
+
 
 const app = express();
+app.use(cors())
 app.use(express.json())
 
 
@@ -15,11 +19,6 @@ app.get("/", (req,res) => {
         </body>
 
     `)
-});
-
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log("Servidor Rodando na porta http://127.0.0.1:3000")
 });
 
 
@@ -104,3 +103,8 @@ app.delete("/incidentes/:id", async (req,res) => {
 
 
 })
+
+const PORT = process.env.POR || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor Rodando na porta http://127.0.0.1:${PORT}`)
+});
